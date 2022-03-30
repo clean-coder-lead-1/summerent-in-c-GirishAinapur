@@ -33,3 +33,23 @@ TEST_CASE("Colling Type High")
   REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 30) == NORMAL);
 }
 
+TEST_CASE("Alert - Controller") 
+{
+  BatteryCharacter BatChar;
+  
+  BatChar.coolingType = PASSIVE_COOLING;
+  BatChar.brand[48] = {0};
+  
+  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 50) == TOO_HIGH);
+}
+
+TEST_CASE("Alert - Email"") 
+{
+  BatteryCharacter BatChar;
+  
+  BatChar.coolingType = MED_ACTIVE_COOLING;
+  BatChar.brand[48] = {0};
+  
+  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 30) == NORMAL);
+}
+
