@@ -40,7 +40,7 @@ TEST_CASE("Alert - Controller")
   BatChar.coolingType = PASSIVE_COOLING;
   BatChar.brand[48] = {0};
   
-  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 50) == void());
+  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 50) == 0);
 }
 
 TEST_CASE("Alert - Email") 
@@ -50,6 +50,6 @@ TEST_CASE("Alert - Email")
   BatChar.coolingType = MED_ACTIVE_COOLING;
   BatChar.brand[48] = {0};
   
-  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 30) == void());
+  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 30) == 0);
 }
 
