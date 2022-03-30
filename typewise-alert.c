@@ -3,20 +3,18 @@
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) 
 {
-  BreachType retvalue = 0;
+  BreachType retvalue = TOO_LOW;
   
   if(value < lowerLimit) 
   {
     retvalue = TOO_LOW;
   }
-  else if(value > upperLimit)
+  if(value > upperLimit)
   {
     retvalue = TOO_HIGH;
   }
-  else
-  {
-    retvalue = NORMAL;
-  }
+  retvalue = NORMAL;
+  
   return retvalue;
 }
 
