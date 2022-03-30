@@ -18,17 +18,17 @@ TEST_CASE("infers the breach according to limits - High")
   REQUIRE(inferBreach(50, 10, 30) == TOO_HIGH);
 }
 
-TEST_CASE("infers the breach according to limits - Normal") 
+TEST_CASE("Colling Type Normal") 
 {
   REQUIRE(classifyTemperatureBreach(PASSIVE_COOLING, -5) == TOO_LOW);
 }
 
-TEST_CASE("infers the breach according to limits - Low") 
+TEST_CASE("Colling Type Low") 
 {
   REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 50) == TOO_HIGH);
 }
 
-TEST_CASE("infers the breach according to limits - High") 
+TEST_CASE("Colling Type High") 
 {
   REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 30) == NORMAL);
 }
