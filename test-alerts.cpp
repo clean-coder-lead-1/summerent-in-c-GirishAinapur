@@ -24,6 +24,16 @@ TEST_CASE("Alert - Controller 2")
   checkAndAlert((AlertTarget)5, BatChar, 10);
 }
 
+TEST_CASE("Alert - Controller 3") 
+{
+  BatteryCharacter BatChar;
+  
+  BatChar.coolingType = PASSIVE_COOLING;
+  BatChar.brand[48] = {0};
+  
+  checkAndAlert(TO_CONTROLLER, BatChar, 0);
+}
+
 TEST_CASE("Alert - Email 1") 
 {
   BatteryCharacter BatChar;
