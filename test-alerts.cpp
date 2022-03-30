@@ -18,10 +18,10 @@ TEST_CASE("Alert - Controller 2")
 {
   BatteryCharacter BatChar;
   
-  BatChar.coolingType = 4;
+  BatChar.coolingType = (CoolingType)4;
   BatChar.brand[48] = {0};
   
-  checkAndAlert(5, BatChar, 10);
+  checkAndAlert((AlertTarget)5, BatChar, 10);
 }
 
 TEST_CASE("Alert - Email 1") 
