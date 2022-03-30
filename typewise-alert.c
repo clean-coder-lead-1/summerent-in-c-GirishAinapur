@@ -3,7 +3,7 @@
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) 
 {
-  int retvalue = 0;
+  BreachType retvalue = 0;
   
   if(value < lowerLimit) 
   {
