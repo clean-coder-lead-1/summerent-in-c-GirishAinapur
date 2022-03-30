@@ -50,6 +50,6 @@ TEST_CASE("Alert - Email")
   BatChar.coolingType = MED_ACTIVE_COOLING;
   BatChar.brand[48] = {0};
   
-  checkAndAlert(TO_CONTROLLER, BatChar, 30);
+  checkAndAlert(TO_EMAIL, BatChar, 30);
 }
 
