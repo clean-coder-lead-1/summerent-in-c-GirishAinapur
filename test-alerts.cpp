@@ -40,16 +40,16 @@ TEST_CASE("Alert - Controller")
   BatChar.coolingType = PASSIVE_COOLING;
   BatChar.brand[48] = {0};
   
-  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 50) == TOO_HIGH);
+  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 50));
 }
 
-TEST_CASE("Alert - Email"") 
+TEST_CASE("Alert - Email") 
 {
   BatteryCharacter BatChar;
   
   BatChar.coolingType = MED_ACTIVE_COOLING;
   BatChar.brand[48] = {0};
   
-  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 30) == NORMAL);
+  REQUIRE(checkAndAlert(TO_CONTROLLER, BatChar, 30));
 }
 
