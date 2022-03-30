@@ -3,7 +3,7 @@
 #include "test/catch.hpp"
 #include "typewise-alert.h"
 
-TEST_CASE("Alert - Controller") 
+TEST_CASE("Alert - Controller 1") 
 {
   BatteryCharacter BatChar;
   
@@ -14,7 +14,7 @@ TEST_CASE("Alert - Controller")
 }
 
 
-TEST_CASE("Alert - Controller") 
+TEST_CASE("Alert - Controller 2") 
 {
   BatteryCharacter BatChar;
   
