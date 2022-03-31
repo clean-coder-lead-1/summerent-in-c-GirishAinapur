@@ -115,3 +115,30 @@ TEST_CASE("Alert - Email 3")
   checkAndAlert(TO_EMAIL, BatChar, 50);
 }
 
+
+TEST_CASE("Checks the temperature state of the battery and alerts accordingly")
+{
+    BatteryCharacter batteryChar;
+    checkAndAlert(TO_CONTROLLER, batteryChar, 25);
+    checkAndAlert(TO_CONTROLLER, batteryChar, 45);
+    checkAndAlert(TO_CONTROLLER, batteryChar, -2);
+    checkAndAlert(TO_EMAIL, batteryChar, 25);
+    checkAndAlert(TO_EMAIL, batteryChar, 45);
+    checkAndAlert(TO_EMAIL, batteryChar, -2);
+
+    batteryChar.coolingType = HI_ACTIVE_COOLING;
+    checkAndAlert(TO_CONTROLLER, batteryChar, 35);
+    checkAndAlert(TO_CONTROLLER, batteryChar, 50);
+    checkAndAlert(TO_CONTROLLER, batteryChar, -3);
+    checkAndAlert(TO_EMAIL, batteryChar, 35);
+    checkAndAlert(TO_EMAIL, batteryChar, 50);
+    checkAndAlert(TO_EMAIL, batteryChar, -3);
+
+    batteryChar.coolingType = MED_ACTIVE_COOLING;
+    checkAndAlert(TO_CONTROLLER, batteryChar, 30);
+    checkAndAlert(TO_CONTROLLER, batteryChar, 45);
+    checkAndAlert(TO_CONTROLLER, batteryChar, -1);
+    checkAndAlert(TO_EMAIL, batteryChar, 30);
+    checkAndAlert(TO_EMAIL, batteryChar, 45);
+    checkAndAlert(TO_EMAIL, batteryChar, -1);
+}
