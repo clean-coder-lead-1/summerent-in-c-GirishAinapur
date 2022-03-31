@@ -31,7 +31,38 @@ TEST_CASE("Alert - Controller 3")
   BatChar.coolingType = PASSIVE_COOLING;
   BatChar.brand[48] = {0};
   
+  checkAndAlert(TO_CONTROLLER, BatChar, -5);
+}
+
+TEST_CASE("Alert - Controller 4") 
+{
+  BatteryCharacter BatChar;
+  
+  BatChar.coolingType = PASSIVE_COOLING;
+  BatChar.brand[48] = {0};
+  
+  checkAndAlert(TO_CONTROLLER, BatChar, 50);
+}
+
+
+TEST_CASE("Alert - Controller 3") 
+{
+  BatteryCharacter BatChar;
+  
+  BatChar.coolingType = PASSIVE_COOLING;
+  BatChar.brand[48] = {0};
+  
   checkAndAlert(TO_CONTROLLER, BatChar, 0);
+}
+
+TEST_CASE("Alert - Email 1") 
+{
+  BatteryCharacter BatChar;
+  
+  BatChar.coolingType = MED_ACTIVE_COOLING;
+  BatChar.brand[48] = {0};
+  
+  checkAndAlert(TO_EMAIL, BatChar, 30);
 }
 
 TEST_CASE("Alert - Email 1") 
