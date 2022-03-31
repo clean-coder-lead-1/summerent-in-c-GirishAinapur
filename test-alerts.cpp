@@ -76,7 +76,5 @@ TEST_CASE("Medium Active Cooling")
     checkAndAlert(TO_CONTROLLER, BattChar, 27);
     checkAndAlert(TO_CONTROLLER, BattChar, -3);
     checkAndAlert(TO_CONTROLLER, BattChar, 55);
-    
-    
 }
 
