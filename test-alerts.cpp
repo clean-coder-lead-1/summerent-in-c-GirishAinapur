@@ -65,7 +65,7 @@ TEST_CASE("Alert - Email 1")
   checkAndAlert(TO_EMAIL, BatChar, 30);
 }
 
-TEST_CASE("Alert - Email 1") 
+TEST_CASE("Alert - Email 3") 
 {
   BatteryCharacter BatChar;
   
